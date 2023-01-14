@@ -1,0 +1,37 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Api to update and create relations for items",
+        "version": "0.1"
+    },
+    "paths": {
+        "/item_dependente/{item_estoque}": {
+            "get": {
+                "summary": "Get list of items",
+                "operationId": "4b22e7834b7d1ded27cc439a4a8ac24d",
+                "parameters": [
+                    {
+                        "name": "item_estoque",
+                        "in": "query",
+                        "description": "Item id",
+                        "required": true,
+                        "schema": {
+                            "type": "int"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        }
+    }
+}
